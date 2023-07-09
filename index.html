@@ -23,12 +23,11 @@
 
     //function to call when shake occurs
     function shakeEventDidOccur () {
-        let x = document.getElementById("Number")
-        let Num = x.innerText;
-        //console.log(Num)
+        let x = document.querySelector("#Number")
+        let Num = x.textContent;
+        console.log(Num)
         Number(Num)
-        x.innerHtml= Num + 1; 
-        
+        x.textContent = Num + 1; 
     }
 
     window.addEventListener("beforeunload", function END(){
