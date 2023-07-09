@@ -25,11 +25,11 @@
     function shakeEventDidOccur () {
         let x = document.querySelector("#Number")
         let Num = x.textContent;
-        Number(Num)
         console.log(Num)
         x.textContent = "";
         console.log(x.textContent)
-        x.textContent = Num + 1; 
+        let Number = Number(Num) + 1
+        x.textContent = Number; 
     }
 
     window.addEventListener("beforeunload", function END(){
