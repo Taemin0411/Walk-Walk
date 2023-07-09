@@ -16,7 +16,7 @@
 <script>
     var myShakeEvent = new Shake({
         threshold: 15, // optional shake strength threshold
-        timeout: 100 // optional, determines the frequency of event generation
+        timeout: 1 // optional, determines the frequency of event generation
     });
     myShakeEvent.start();
     window.addEventListener('shake', shakeEventDidOccur, false);
@@ -27,7 +27,7 @@
         let Num = x.innerText;
         console.log(Num)
         Number(Num)
-        x.innerText= Num + 1; 
+        x.innerHtml= Num + 1; 
         
     }
 
