@@ -10,7 +10,7 @@
 <body>
     <div class="Walking">
         <h3>today</h3>
-        <h1>0</h1>
+        <h1 id="Number">0</h1>
     </div>
 </body>
 <script>
@@ -23,7 +23,7 @@
 
     //function to call when shake occurs
     function shakeEventDidOccur () {
-        let x = document.getElementsByTagName("h1")
+        let x = document.getElementById("Number")
         let Num = x.innerText;
         console.log(Num)
         x.innerText="Javascript"; 
