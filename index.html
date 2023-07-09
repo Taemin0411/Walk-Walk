@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walk Walk</title>
+    <script src="alexgibson-shake.js-d232eee/shake.js"></script> 
+</head>
+<body>
+    <div class="Walking">
+        <h3>today</h3>
+        <h1>0</h1>
+    </div>
+</body>
+<script>
+    var myShakeEvent = new Shake({
+        threshold: 15, // optional shake strength threshold
+        timeout: 100 // optional, determines the frequency of event generation
+    });
+    myShakeEvent.start();
+    window.addEventListener('shake', shakeEventDidOccur, false);
+
+    //function to call when shake occurs
+    function shakeEventDidOccur () {
+        let x = document.getElementsByTagName("h1")
+        let Num = x.innerText;
+        console.log(Num)
+        x.innerText="Javascript"; 
+        
+    }
+
+    window.addEventListener("beforeunload", function END(){
+        myShakeEvent.stop();
+    })
+</script>
+</html>
